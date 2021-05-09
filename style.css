@@ -1,0 +1,221 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    background-color: #F7F9FB;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+span {
+    float: left;
+    line-height: 85%;
+    width: .7em;
+    font-size: 400%;
+    font-family: 'Open Sans';
+}
+
+h1 {
+    font-family: 'Playfair Display';
+    color: #687864;
+    font-size: 3em;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+h2 {
+    font-family: 'Open Sans';
+    color: #5085A5;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: serif;
+    font-weight: lighter;
+    font-style: italic;
+    color: #162933;
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Open Sans';
+    color: #31708E;
+    font-size: 1.5em;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    box-shadow: inset 0 -2px 0 rgba(50, 85, 127, 0.5), 0 2px 0 rgba(50, 85, 127, 0.5);
+    transition: box-shadow .3s;
+    color: inherit;
+    overflow: hidden;
+}
+
+a:hover {
+    box-shadow: inset 0 -30px 0 rgba(50, 85, 127, 0.5), 0 2px 0 rgba(50, 85, 127, 0.5);
+}
+
+.heading h4 {
+    display: inline;
+    font-size: 2.3em;
+    -webkit-text-stroke: 1px #687864;
+    -webkit-text-fill-color: #F7F9FB;
+    font-weight: 800;
+    font-family: "Open Sans";
+}
+
+.footer a {
+    font-family: serif;
+    font-weight: lighter;
+    font-style: italic;
+    color: #162933;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.footer a:hover {
+    opacity: 0.6;
+}
+
+.footer p {
+    font-family: serif;
+    font-weight: lighter;
+    font-style: italic;
+    color: #162933;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.caption {
+    font-family: serif;
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 10px;
+    color: #162933;
+    margin-top: 0;
+}
+
+.caption a {
+    font-family: serif;
+    font-weight: lighter;
+    font-size: 12px;
+    line-height: 10px;
+    color: #ccc;
+    margin-top: 0;
+    text-decoration: none;
+}
+
+.caption a:hover {
+    opacity: 0.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.image-fluid {
+    max-width: 100%;
+}
+
+.tabbar {
+    margin-bottom: 1rem;
+}
+
+.tab {
+    background-color: #fff;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    font-family: serif;
+    font-weight: lighter;
+    font-style: italic;
+    color: #ccc;
+    font-size: 16px;
+    padding: .8rem;
+    transition: color ease-in-out 300ms;
+}
+
+.tab:hover {
+    color: inherit;
+    cursor: pointer;
+}
+
+.tab.active {
+    border-bottom-color: #5085A5;
+    color: inherit;
+}
+
+.tab.active:hover {
+    cursor: default;
+}
+
+.tabpanel {
+    display: none;
+    padding: 1em 0;
+}
+
+.tabpanel.active {
+    animation-duration: 300ms;
+    animation-name: panelswitch;
+    animation-timing-function: ease-in;
+    display: block;
+}
+
+@keyframes panelswitch {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    h1 {
+        font-family: 'Playfair Display';
+        color: #687864;
+        font-size: 5.5em;
+    }
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
