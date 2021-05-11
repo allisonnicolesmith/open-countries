@@ -160,6 +160,7 @@ a:hover {
     font-size: 16px;
     padding: .8rem;
     transition: color ease-in-out 300ms;
+    margin: 10px auto;
 }
 
 .tab:hover {
@@ -183,12 +184,12 @@ a:hover {
 
 .tabpanel.active {
     animation-duration: 300ms;
-    animation-name: panelswitch;
+    animation-name: panselswitch;
     animation-timing-function: ease-in;
     display: block;
 }
 
-@keyframes panelswitch {
+@keyframes panelswitchswitch {
     0% {
         opacity: 0;
     }
